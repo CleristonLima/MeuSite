@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.barraColorida {
+    background-color: #345bdb;
+    padding: 10px 30px; /* Adicionei 20px de espaçamento à esquerda e à direita */
+    text-align: center;
+    color: white;
+}
+
+.meuTitulo {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: Helvetica;
+    animation: animacaoLetreiro 15s linear infinite;
+}
+
+@keyframes animacaoLetreiro {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*.barraBranca {
+    background-color: white;
+    padding: 10px 20px; 
+    text-align: center;
+    
+} */
+.barraBranca {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Define a direção da flexão para coluna (vertical) */
+}
+/* Adicione o estilo para o ícone do menu */
+.menu-icon {
+    /*display: block;*/
+    cursor: pointer;
+    background-color: white
+}
+
+/* As barras horizontais do ícone */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Quando o mouse está sobre o ícone, anima as barras para formar um 'X' */
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+/* Adicione o estilo para o menu aparecer e desaparecer */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    font-family: Helvetica;
+}
+
+
+nav ul li {
+    /*padding: 10px;*/
+    background-color: white;
+    text-align: left;
+    margin-left: 20px;
+    font-family: Helvetica;
+}
+
+nav ul li a {
+    color: #345bdb;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+    font-family: Helvetica;
+}
+
+/* Adicione uma media query para ajustar o layout em telas pequenas */
+@media screen and (max-width: 600px) {
+    .barraBranca {
+        flex-direction: row; /* Altera para linha (horizontal) em telas pequenas */
+    }
+
+    nav ul li a {
+        padding-right: 0; /* Define o espaçamento interno para 0 em telas pequenas */
+        margin-bottom: 10px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        margin: 10px 0;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer a {
+        margin: 10px 0;
+    }
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #345bdb;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 15px;
+    padding-left: 20px; /* Adicionei 20px de espaçamento à esquerda */
+    font-family: Helvetica;
+}
+
+a {
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+    font-family: Helvetica;
+}
+
+.foto {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-left: 20px; /* Adicionei 20px de espaçamento à esquerda */
+    font-family: Helvetica;
+}
+
+h2 {
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: Helvetica;
+}
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Helvetica;
+}
+
+footer img {
+    list-style-type: none;
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    margin: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 2px;
+}
+
+h3 {
+    color: #345bdb;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    font-family: Helvetica;
+}
+
+.sorriso {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+/* Adiciona uma media query para ajustar o layout em telas pequenas */
+@media screen and (max-width: 600px) {
+    header {
+        text-align: center;
+    }
+
+    header img {
+        margin: 10px 0;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer a {
+        margin: 10px 0;
+    }
+}
